@@ -1,0 +1,30 @@
+.row {
+    display: flex;
+}
+
+.col {
+    flex: 1;
+    background-color: #CCC;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.row:nth-child(2n+1) .col {
+    background-color: #8ff
+}
+
+.row .col:nth-child(2n) {
+    background-color: #f8f;
+}
+
+.letter {
+    font-size: 5em;
+    display: block;
+    margin: 0 auto;
+}
+
+.winLoc {
+    background: black !important;
+    color: white !important
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <div class="hook"></div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/ractive.js"></script>
+    <script src="scripts/main.js"></script>
+    <script id="template" type="text/ractive">
+        Turn:{{turn}} {{#if hasWon}} {{curTurn}} has won {{hasWonVia}} {{/if}}
+        <button on-click="clear">Reset</button> {{#each r:i}}
+        <div class="row">{{#each c:ic}}
+            <div class="col {{isWinLoc(i,ic)}}" on-click="select:{{i}}:{{ic}}"> {{#if isFilled(i,ic)}}
+                <span class="letter">{{display(i,ic)}}</span> {{/if}}
+
+            </div>
+            {{/each}} </div> {{/each}}
+    </script>
+
+</body>
+
+</html>
